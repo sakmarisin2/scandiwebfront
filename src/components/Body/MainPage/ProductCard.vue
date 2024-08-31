@@ -1,17 +1,41 @@
 <template>
     <div class="card-wrap">
         <div class="card-content">
-            <input type="checkbox">
-            <p>SKU</p>
-            <p>Product name</p>
-            <p>Price $</p>
-            <p>Size: 100mb</p>
+            <input type="checkbox" class="delete-checkbox" v-model="isSelected" @change="SelectionChange">
+            <p>{{jsonData.SKU}}</p>
+            <p>{{jsonData.name}}</p>
+            <p>{{jsonData.price}} $</p>
+            <p v-show="jsonData.type == 'DVD'">Size: {{jsonData.attributes.size}} MB</p>
+            <p v-show="jsonData.type == 'Book'">Weight: {{jsonData.attributes.weight}} KG</p>
+            <p v-show="jsonData.type == 'Furniture'">Dimension: 
+                {{jsonData.attributes.height}}x{{jsonData.attributes.width}}x{{jsonData.attributes.length}} </p>
         </div>
     </div>
 </template>
 
 <script setup>
+import {
+  defineProps,
+  ref,
+} from 'vue';
 
+import { useStore } from 'vuex/dist/vuex.cjs.js';
+
+const store = useStore()
+const props = defineProps({
+    jsonData: {
+        type: Object,
+        required: true
+    }
+})
+
+const {jsonData} = props
+
+const isSelected = ref(false)
+
+const SelectionChange = () => {
+    store.commit('toggleProductSelection', { id: jsonData.product_id, selected: isSelected.value })
+}
 </script>
 
 <style lang="scss" scoped>

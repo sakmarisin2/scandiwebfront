@@ -14,16 +14,10 @@ import { SetType } from '../../../js/methods/methods';
 </script>
 
 <style lang="scss" scoped>
+@import '../../../styles/mixins.scss';
+@include input-labels;
 .type-wrap{
     margin-top: 10vh;
     display: flex;
-    label{
-        color: white;
-        white-space: nowrap;
-    }
-    input{
-        width: 100%;
-        height: 30px;
-    }
 }
 </style>

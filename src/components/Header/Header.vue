@@ -1,12 +1,16 @@
 <template>
     <div class="Header-container">
-        <h1>{{ this.$route.name}}</h1>
-        <ActionButtons />
+        <h1>{{route.name}}</h1>
+        <ActionButtons/>
     </div>
 </template>
 
 <script setup>
+import { useRoute } from 'vue-router';
+
 import ActionButtons from './ActionButtons.vue';
+
+const route = useRoute()
 </script>
 
 <style lang="scss" scoped>
