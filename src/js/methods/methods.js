@@ -4,59 +4,75 @@ export const SetType = (event) =>{
     store.commit('SetCurrentType',event.target.value)
 }
 
+const showAlert = (message) => {
+    alert(message);
+};
+
+const validateRequiredFields = (fields) => {
+    return fields.every(field => field);
+};
+
+const validateNumeric = (value) => !isNaN(value) && value > 0;
+
+const validateDVDAttributes = (attributes) => {
+    return attributes.size && validateNumeric(attributes.size);
+};
+
+const validateFurnitureAttributes = (attributes) => {
+    const { height, width, length } = attributes;
+    return height && width && length &&
+           validateNumeric(height) &&
+           validateNumeric(width) &&
+           validateNumeric(length);
+};
+
+
+const validateBookAttributes = (attributes) => {
+    return attributes.weight && validateNumeric(attributes.weight);
+};
+
+
 export const validateForm = () => {
     const { SKU, name, price, attributes } = store.state.formData;
     const currentType = store.state.currentType;
 
-    if (!SKU || !name || !price) {
-        alert("Please, submit required data");
+
+    if (!validateRequiredFields([SKU, name, price])) {
+        showAlert("Please, submit required data");
         return false;
-    } else if (!isNaN(name)) {
-        alert("Please, provide the data of indicated type");
+    }
+    if (!isNaN(name)) {
+        showAlert("Please, provide the data of indicated type");
         return false;
-    } else if (isNaN(price) || price <= 0 ||price == 0) {
-        alert("Please, provide the data of indicated type");
+    }
+    if (!validateNumeric(price)) {
+        showAlert("Please, provide the data of indicated type");
         return false;
     }
 
     switch (currentType) {
         case "DVD":
-            if (!attributes.size) {
-                alert("Please, submit required data");
-                return false;
-            }else if (attributes.size <= 0 || attributes.size == 0 || isNaN(attributes.size)) {
-                alert("Please, provide the data of indicated type");
+            if (!validateDVDAttributes(attributes)) {
+                showAlert("Please, submit required data or provide valid data for DVD");
                 return false;
             }
             break;
         case 'Furniture':
-            if (!attributes.height || !attributes.width || !attributes.length) {
-                alert("Please, submit required data");
-                return false;
-            } else if (
-                isNaN(attributes.height) ||
-                isNaN(attributes.width) ||
-                isNaN(attributes.length) ||
-                attributes.height <= 0 ||
-                attributes.width <= 0 ||
-                attributes.length <= 0 ||
-                attributes.height == 0 ||
-                attributes.width == 0 ||
-                attributes.length == 0
-            ) {
-                alert("Please, provide the data of indicated type");
+            if (!validateFurnitureAttributes(attributes)) {
+                showAlert("Please, submit required data or provide valid data for Furniture");
                 return false;
             }
             break;
         case 'Book':
-            if (!attributes.weight) {
-                alert("Please, submit required data");
-                return false;
-            } else if (attributes.weight <= 0 || attributes.weight == 0 || isNaN(attributes.weight)) {
-                alert("Please, provide the data of indicated type");
+            if (!validateBookAttributes(attributes)) {
+                showAlert("Please, submit required data or provide valid data for Book");
                 return false;
             }
             break;
+        default:
+            showAlert("Invalid type selected");
+            return false;
     }
+    
     return true;
 };

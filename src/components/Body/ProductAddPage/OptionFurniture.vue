@@ -1,14 +1,18 @@
 <template>
     <div v-show="store.state.currentType === 'Furniture'" class="select-option" id="Furniture">
         <div class="inpt-el">
-            <label for="height">Height (CM)</label>
-            <label for="height">Width (CM)</label>
-            <label for="height">Lenght (CM)</label>
-        </div>
-        <div class="inpt-el">
-            <input type="number" v-model="formData.attributes.height" placeholder="Height" id="height" required>
-            <input type="number" v-model="formData.attributes.width" placeholder="Width" id="width" required>
-            <input type="number" v-model="formData.attributes.length" placeholder="Length" id="length" required>
+            <div class="field">
+                <label for="height">Height (CM)</label>
+                <input type="number" v-model="formData.attributes.height" placeholder="Height" id="height" required>
+            </div>
+            <div class="field">
+                <label for="height">Width (CM)</label>
+                <input type="number" v-model="formData.attributes.width" placeholder="Width" id="width" required>
+            </div>
+            <div class="field">
+                <label for="height">Lenght (CM)</label>
+                <input type="number" v-model="formData.attributes.length" placeholder="Length" id="length" required>
+            </div>
         </div>
     </div>
 </template>

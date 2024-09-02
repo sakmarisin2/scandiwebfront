@@ -5,7 +5,6 @@ export const getProducts = async () =>{
         const response = await axios.get("http://localhost:80/products");
         return response.data;
     } catch (error) {
-        console.error('Error fetching products:', error);
-        return { data: [] }; 
+        throw error;
     }
 }

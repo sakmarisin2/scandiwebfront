@@ -13,7 +13,7 @@
 @import '../../styles/mixins.scss';
 .footer-container{
     width: 100%;
-    height: 40px;
+    height: 80px;
     @include flex-center;
     border-top: $gray-white;
     padding:20px;
@@ -25,6 +25,7 @@
     bottom: 0;
     h2{
         @include title;
+        font-size: 15px;
     }
 }
 </style>

@@ -27,7 +27,7 @@ onMounted(async () => {
     const result = await getProducts();
     data.value = result;
   } catch (error) {
-    console.error('Error fetching products:', error);
+    throw error;
   }
 });
 </script>

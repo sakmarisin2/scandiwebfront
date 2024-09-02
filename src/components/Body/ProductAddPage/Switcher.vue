@@ -17,7 +17,7 @@ import { SetType } from '../../../js/methods/methods';
 @import '../../../styles/mixins.scss';
 @include input-labels;
 .type-wrap{
-    margin-top: 10vh;
+    margin-top: 5vh;
     display: flex;
 }
 </style>

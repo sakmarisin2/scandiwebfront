@@ -15,6 +15,6 @@ export const massDelete = async (ids) => {
             },
         });
     } catch (error) {
-        console.error('Error deleting products:', error);
+        throw error;
     }
 }

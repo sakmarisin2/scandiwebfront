@@ -1,14 +1,18 @@
 <template>
     <div class="inpt-wrap">
         <div class="inpt-el">
-            <label for="sku">SKU</label>
-            <label for="name">NAME</label>
-            <label for="prive">PRICE ($)</label>
-        </div>
-        <div class="inpt-el">
-            <input type="text" placeholder="sku" id="sku" v-model="formData.SKU" required>
-            <input type="text" placeholder="Name" id="name" v-model="formData.name" required>
-            <input type="number" placeholder="price" id="price" v-model="formData.price" required>
+            <div class="field">
+                <label for="sku">SKU</label>
+                <input type="text" placeholder="sku" id="sku" v-model="formData.SKU" required>
+            </div>
+            <div class="field">
+                <label for="name">NAME</label>
+                <input type="text" placeholder="Name" id="name" v-model="formData.name" required>
+            </div>
+            <div class="field">
+                <label for="prive">PRICE ($)</label>
+                <input type="number" placeholder="price" id="price" v-model="formData.price" required>
+            </div>
         </div>
     </div>
 </template>

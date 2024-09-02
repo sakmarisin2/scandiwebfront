@@ -13,6 +13,15 @@ export const store = createStore({
         attributes: {
             size: null,
         }
+      },
+      defaultFormData: {
+        SKU: '',
+        name: '',
+        price: '',
+        type: 1,
+        attributes: {
+            size: null,
+        }
       }
     }
   },
@@ -54,6 +63,9 @@ export const store = createStore({
         } else {
             state.selectedProductIds = state.selectedProductIds.filter(selectedId => selectedId !== id);
         }
+    },
+    resetFormData(state) {
+      state.formData = { ...state.defaultFormData };
     }
   }
 })

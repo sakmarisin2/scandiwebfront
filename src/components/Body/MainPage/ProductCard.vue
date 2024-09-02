@@ -34,7 +34,7 @@ const {jsonData} = props
 const isSelected = ref(false)
 
 const SelectionChange = () => {
-    store.commit('toggleProductSelection', { id: jsonData.product_id, selected: isSelected.value })
+    store.commit('toggleProductSelection', { id: jsonData.id, selected: isSelected.value })
 }
 </script>
 
@@ -57,13 +57,14 @@ const SelectionChange = () => {
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         position: relative;
         
-        input{
+        .delete-checkbox{
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 10px;
+            left: 10px;
         }
         p{
             margin-bottom: 10px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
         }
     }
 }
