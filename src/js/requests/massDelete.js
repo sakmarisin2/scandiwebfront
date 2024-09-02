@@ -6,7 +6,7 @@ export const massDelete = async (ids) => {
     }
 
     try {
-        await axios.delete('http://localhost/products', {
+        await axios.delete(import.meta.env.VITE_URL_API, {
             headers: {
                 'Content-Type': 'application/json',
             },

@@ -3,11 +3,11 @@
         <div class="inpt-el">
             <div class="field">
                 <label for="sku">SKU</label>
-                <input type="text" placeholder="sku" id="sku" v-model="formData.SKU" required>
+                <input type="text" placeholder="sku" id="sku" v-model="formData.SKU" maxlength="10">
             </div>
             <div class="field">
                 <label for="name">NAME</label>
-                <input type="text" placeholder="Name" id="name" v-model="formData.name" required>
+                <input type="text" placeholder="Name" id="name" v-model="formData.name" maxlength="30">
             </div>
             <div class="field">
                 <label for="prive">PRICE ($)</label>
