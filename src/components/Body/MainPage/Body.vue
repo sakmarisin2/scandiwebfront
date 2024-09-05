@@ -47,8 +47,11 @@ onMounted(async () => {
       @include loader;
     }
     .product-wrap{
-      display: flex;  
-      flex-wrap:wrap;  
+      display: flex;
+      flex-wrap: wrap;       
+      justify-content: center; 
+      align-items: center;  
+      gap: 20px;     
     }
 }
 </style>
