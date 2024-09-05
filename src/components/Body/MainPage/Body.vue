@@ -1,8 +1,10 @@
 <template>
     <div class="body-container">
       <div v-if="data && data.data" class="product-wrap"> 
-        <div v-for="product in data.data" :key="product.id">
-          <ProductCard :jsonData="product"/>
+        <div>
+          <div v-for="product in data.data" :key="product.id">
+            <ProductCard :jsonData="product"/>
+          </div>
         </div>
       </div>
       <div v-else class="loader-wrap">
