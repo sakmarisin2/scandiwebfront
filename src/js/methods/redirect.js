@@ -14,5 +14,8 @@ export const handleSave = async (data) =>{
     const valid = validateForm()
     if(valid){
         await submitForm(data)
+        return true;
+    } else{
+        return false;
     }
 }
