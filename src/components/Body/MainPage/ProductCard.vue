@@ -40,7 +40,7 @@ const SelectionChange = () => {
 
 <style lang="scss" scoped>
 .card-wrap {
-    width: 19vw;
+    width: 18vw;
     height: 150px;
     min-width: 200px;
     margin: 25px;

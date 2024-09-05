@@ -37,7 +37,7 @@ onMounted(async () => {
 <style lang="scss" scoped>
 
 .body-container{
-    width: 100%;
+    width: 100vw;
     height: calc(100vh - 100px);
     padding: 40px;
     overflow:auto;
@@ -49,11 +49,11 @@ onMounted(async () => {
       @include loader;
     }
     .product-wrap{
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
       .product-display{
-        width: 100vw;
+        width: 100%;
         display: flex;
         flex-wrap: wrap;  
       }
