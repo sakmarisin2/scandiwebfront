@@ -7,13 +7,13 @@ export const toAddProduct = () => {
 }
 
 export const cancelAddProduct = () =>{
-    router.push({path: "/"})
+    router.go(-1)
 }
 
 export const handleSave = async (data) =>{
     const valid = validateForm()
     if(valid){
         await submitForm(data)
-        router.push({path: "/"})
+        router.go(-1)
     }
 }
