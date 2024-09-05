@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import { SetType } from '../../../js/methods/methods';
+import { SetType } from '../../../js/store/methods';
 </script>
 
 <style lang="scss" scoped>
