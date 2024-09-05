@@ -1,17 +1,19 @@
 @use './color' as color;
-
+@mixin font-family{
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
 @mixin input-labels {
     label {
         color: color.$font-color;
         white-space: nowrap;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        @include font-family;
         margin-right: 10px;
     }
     input {
         color: color.$font-color;
         width: 20vw;
         height: 30px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        @include font-family;
     }
 }
 
@@ -29,6 +31,6 @@
 @mixin title {
     font-size: 30px;
     color: color.$font-color;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    @include font-family;
     font-weight: 700;
 }

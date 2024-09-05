@@ -15,7 +15,6 @@ const formData = computed(() => store.state.formData);
 </script>
 
 <style lang="scss" scoped>
-
 @include select-class;
 @include input-labels;
 </style>

@@ -63,7 +63,7 @@ const SelectionChange = () => {
         }
         p{
             margin-bottom: 10px;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            @include font-family;
         }
     }
 }

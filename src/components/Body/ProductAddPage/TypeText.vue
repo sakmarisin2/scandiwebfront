@@ -15,6 +15,6 @@ const store = useStore();
 <style lang="scss" scoped>
 .text-wrap{
     margin-top: 20px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    @include font-family;
 }
 </style>
