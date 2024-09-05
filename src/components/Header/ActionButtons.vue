@@ -20,7 +20,7 @@ import {
   cancelAddProduct,
   handleSave,
   toAddProduct,
-} from '../../js/methods/redirect';
+} from '../../js/methods/navigation';
 import { massDelete } from '../../js/requests/massDelete';
 
 const store = useStore()
@@ -34,11 +34,11 @@ const saveProduct = async () =>{
     const result = await handleSave(store.state.formData)
     if (result) {
         router.push('/')
+        store.commit('resetFormData')
     }
 }
 const deleteProducts = async () =>{
     await massDelete(store.state.selectedProductIds)
-
     router.go()
 }
 </script>

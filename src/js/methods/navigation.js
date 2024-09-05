@@ -1,6 +1,6 @@
 import { submitForm } from '../requests/submitForm';
-import { router } from '../router';
-import { validateForm } from './methods';
+import { router } from '../router/router';
+import { validateForm } from './formValidation';
 
 export const toAddProduct = () => {
     router.push({path: '/add-product'})

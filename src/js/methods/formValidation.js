@@ -1,36 +1,11 @@
-import { store } from '../store';
-
-export const SetType = (event) =>{
-    store.commit('SetCurrentType',event.target.value)
-}
-
-const showAlert = (message) => {
-    alert(message);
-};
-
-const validateRequiredFields = (fields) => {
-    return fields.every(field => field);
-};
-
-const validateNumeric = (value) => !isNaN(value) && value > 0;
-
-const validateDVDAttributes = (attributes) => {
-    return attributes.size && validateNumeric(attributes.size);
-};
-
-const validateFurnitureAttributes = (attributes) => {
-    const { height, width, length } = attributes;
-    return height && width && length &&
-           validateNumeric(height) &&
-           validateNumeric(width) &&
-           validateNumeric(length);
-};
-
-
-const validateBookAttributes = (attributes) => {
-    return attributes.weight && validateNumeric(attributes.weight);
-};
-
+import {
+  showAlert,
+  validateBookAttributes,
+  validateDVDAttributes,
+  validateFurnitureAttributes,
+  validateNumeric,
+  validateRequiredFields,
+} from './alertUtils';
 
 export const validateForm = () => {
     const { SKU, name, price, attributes } = store.state.formData;

@@ -45,7 +45,7 @@ const SelectionChange = () => {
     width: 19vw;
     height: 150px;
     min-width: 200px;
-    margin: 20px;
+    margin: 25px;
 
     @include flex-center;
 
