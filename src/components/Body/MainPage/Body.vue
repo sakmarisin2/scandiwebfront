@@ -49,10 +49,10 @@ onMounted(async () => {
       @include loader;
     }
     .product-wrap{
-      display: flex;      
-      justify-content: center; 
-      align-items: center;  
-      gap: 20px;     
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
       .product-display{
         display: flex;
         flex-wrap: wrap;  
