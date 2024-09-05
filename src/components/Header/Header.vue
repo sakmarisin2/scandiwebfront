@@ -14,8 +14,7 @@ const route = useRoute()
 </script>
 
 <style lang="scss" scoped>
-@import '../../styles/color.scss';
-@import '../../styles/mixins.scss';
+
 .Header-container{
     width: 100%;
     height: 90px;

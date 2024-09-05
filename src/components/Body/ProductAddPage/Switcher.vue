@@ -15,7 +15,7 @@ import { SetType } from '../../../js/store/methods';
 </script>
 
 <style lang="scss" scoped>
-@import '../../../styles/mixins.scss';
+
 @include input-labels;
 .type-wrap{
     margin-top: 5vh;

@@ -44,7 +44,6 @@ const deleteProducts = async () =>{
 </script>
 
 <style lang="scss" scoped>
-@import '../../styles/mixins.scss';
 
 .header-btn-wrap {
     @include flex-between;

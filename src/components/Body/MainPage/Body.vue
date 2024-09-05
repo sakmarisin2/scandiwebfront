@@ -33,7 +33,7 @@ onMounted(async () => {
 </script>
 
 <style lang="scss" scoped>
-@import '../../../styles/mixins.scss';
+
 .body-container{
     width: 100%;
     height: calc(100vh - 100px);

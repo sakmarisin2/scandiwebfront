@@ -27,8 +27,6 @@ const formData = computed(() => store.state.formData);
 </script>
 
 <style lang="scss" scoped>
-@import '../../../styles/mixins.scss';
-
 .inpt-wrap{
     @include flex-between;
     @include inpt-el-class;

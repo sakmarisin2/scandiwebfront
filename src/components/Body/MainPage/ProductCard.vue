@@ -39,8 +39,6 @@ const SelectionChange = () => {
 </script>
 
 <style lang="scss" scoped>
-@import '../../../styles/mixins.scss';
-
 .card-wrap {
     width: 19vw;
     height: 150px;

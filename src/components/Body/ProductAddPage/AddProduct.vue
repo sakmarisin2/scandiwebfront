@@ -21,8 +21,6 @@ import TypeText from './TypeText.vue';
 </script>
 
 <style lang="scss" scoped>
-@import '../../../styles/mixins.scss';
-
 .form-container {
     height: 100%;
     width: 100%;

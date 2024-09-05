@@ -1,5 +1,3 @@
-@import './styles/color.scss';
-
 *, *:before, *:after{
   box-sizing: border-box;
 }
@@ -22,7 +20,7 @@ footer, header, nav, section, main{
 
 body{
   line-height: 1;
-  background-color: $background-color;
+  background-color: rgb(247, 249, 242);
   overflow: hidden;
 }
 

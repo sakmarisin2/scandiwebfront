@@ -27,7 +27,6 @@ const formData = computed(() => store.state.formData);
 </script>
 
 <style lang="scss" scoped>
-@import '../../../styles/mixins.scss';
 @include select-class;
 @include inpt-el-class;
 @include input-labels;
