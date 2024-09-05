@@ -66,7 +66,7 @@ export const store = createStore({
     },
     resetFormData(state) {
       state.formData = { ...state.defaultFormData };
-      this.SetCurrentType('default')
+      this.commit("SetCurrentType",'default')
     }
   }
 })
