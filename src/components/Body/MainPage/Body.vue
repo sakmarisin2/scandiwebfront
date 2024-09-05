@@ -1,7 +1,7 @@
 <template>
     <div class="body-container">
       <div v-if="data && data.data" class="product-wrap"> 
-        <div>
+        <div class="product-display">
           <div v-for="product in data.data" :key="product.id">
             <ProductCard :jsonData="product"/>
           </div>
@@ -49,11 +49,14 @@ onMounted(async () => {
       @include loader;
     }
     .product-wrap{
-      display: flex;
-      flex-wrap: wrap;       
+      display: flex;      
       justify-content: center; 
       align-items: center;  
       gap: 20px;     
+      .product-display{
+        display: flex;
+        flex-wrap: wrap;  
+      }
     }
 }
 </style>
