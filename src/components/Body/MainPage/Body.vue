@@ -47,7 +47,9 @@ onMounted(async () => {
       @include loader;
     }
     .product-wrap{
-      display: flex;    
+      display: flex;  
+      align-items: center;
+      justify-content: center;
       flex-wrap:wrap;  
     }
 }

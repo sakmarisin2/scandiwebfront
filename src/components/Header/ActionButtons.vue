@@ -32,6 +32,7 @@ const cancel = () =>{
 }
 const saveProduct = async () =>{
     await handleSave(store.state.formData)
+    router.push('/')
 }
 const deleteProducts = async () =>{
     await massDelete(store.state.selectedProductIds)

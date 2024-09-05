@@ -42,9 +42,10 @@ const SelectionChange = () => {
 @import '../../../styles/mixins.scss';
 
 .card-wrap {
-    width: 250px;
+    width: 19vw;
     height: 150px;
-    margin: 30px;
+    min-width: 200px;
+    margin: 20px;
 
     @include flex-center;
 
