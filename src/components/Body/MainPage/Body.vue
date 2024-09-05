@@ -50,8 +50,8 @@ onMounted(async () => {
     }
     .product-wrap{
       width: 100%;
-      margin-left: auto;
-      margin-right: auto;
+      display: flex;
+      justify-content: center;
       .product-display{
         width: 100%;
         display: flex;
