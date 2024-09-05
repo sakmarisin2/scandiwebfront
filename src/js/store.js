@@ -4,12 +4,12 @@ export const store = createStore({
   state () {
     return {
       selectedProductIds: [],
-      currentType: "DVD",
+      currentType: "default",
       formData: {
         SKU: '',
         name: '',
         price: '',
-        type: 1,
+        type: null,
         attributes: {
             size: null,
         }
@@ -18,7 +18,7 @@ export const store = createStore({
         SKU: '',
         name: '',
         price: '',
-        type: 1,
+        type: null,
         attributes: {
             size: null,
         }
