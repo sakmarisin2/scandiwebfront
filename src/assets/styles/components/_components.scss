@@ -1,4 +1,4 @@
-@use '../abstracts/mixins';
+@use '../abstracts/mixins' as mixin;
 
 @mixin select-class{
     .select-option{
@@ -69,7 +69,7 @@
         color: #3B3B3B;
         cursor: pointer;
         display: inline-block;
-        @include font-family;
+        @include mixin.font-family;
         font-size: 10px;
         font-weight: 600;
         line-height: normal;
