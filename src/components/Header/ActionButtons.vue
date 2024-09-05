@@ -31,7 +31,6 @@ const cancel = () =>{
     store.commit('resetFormData')
 }
 const saveProduct = async () =>{
-    router.go()
     await handleSave(store.state.formData)
 }
 const deleteProducts = async () =>{
