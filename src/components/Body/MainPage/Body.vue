@@ -39,9 +39,8 @@ onMounted(async () => {
 .body-container{
     width: 100vw;
     height: calc(100vh - 100px);
-    padding: 40px;
     overflow:auto;
-
+    padding: 30px;
     .loader-wrap{
       width: 100%;
       height: 100%;
@@ -50,8 +49,15 @@ onMounted(async () => {
     }
     .product-wrap{
       width: 100%;
-      display: flex;
-      justify-content: center;
+      max-width: 1150px; 
+      margin: 0 auto;
+      @media (max-width: 1250px){
+          max-width: 1100px;
+      } 
+      @media (max-width: 1152px){
+          max-width: 1020px;
+      }
+
       .product-display{
         width: 100%;
         display: flex;
